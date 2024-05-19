@@ -3,6 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui"],
   app: {
-    baseURL: process.env.url
+    baseURL: process.env.BASE_URL
   }
 })
