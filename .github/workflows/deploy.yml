@@ -39,3 +39,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      - name: Set root_url
+        id: set-root-url
+        run: echo "root_url=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_OUTPUT
