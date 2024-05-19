@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-  const { data } = useFetch('api/data')
+  const { data } = useFetch('/api/data')
 </script>
 
 <style>
