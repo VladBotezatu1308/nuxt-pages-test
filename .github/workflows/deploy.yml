@@ -33,6 +33,7 @@ jobs:
     environment:
       name: github_pages
       url: ${{ steps.deployment.outputs.page_url }}
+      base_url: ${{ steps.deployment.outputs.base_url }}
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
@@ -41,4 +42,4 @@ jobs:
         uses: actions/deploy-pages@v1
       - name: Set root_url
         id: set-root-url
-        run: echo "root_url=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_OUTPUT
+        run: echo "root_url=$( basename ${{ steps.deployment.outputs.page_url }} )" >> $GITHUB_OUTPUT
