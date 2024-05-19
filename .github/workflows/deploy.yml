@@ -7,7 +7,7 @@ on:
       - master
 
 env:
-  BASE_URL: ${{ github.event.repository.name }}
+  BASE_URL: "/${{ github.event.repository.name }}"
 jobs:
   build:
     runs-on: ubuntu-latest
